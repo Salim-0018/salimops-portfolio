@@ -20,7 +20,7 @@ spec:
       containers:
         - name: portfolio
 
-          image: paul48/salimops-portfolio:latest
+          image: paul48/salimops-portfolio:c94618c72b0f66de40275ab7ed3b096bae16f90e
 
           ports:
             - containerPort: 80
