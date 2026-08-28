@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+
+metadata:
+  name: salimops-portfolio
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: salimops-portfolio
+
+  template:
+    metadata:
+      labels:
+        app: salimops-portfolio
+
+    spec:
+      containers:
+        - name: portfolio
+
+          image: paul48/salimops-portfolio:latest
+
+          ports:
+            - containerPort: 80
+
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+
+            limits:
+              cpu: "500m"
+              memory: "256Mi"
