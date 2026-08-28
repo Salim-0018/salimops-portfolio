@@ -86,4 +86,3 @@ jobs:
           git commit -m "Update Docker image to ${{ github.sha }}" || echo "No changes to commit"
 
           git push
-```
